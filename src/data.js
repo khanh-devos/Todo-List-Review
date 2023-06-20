@@ -47,7 +47,7 @@ export const exhangeData = (liId1, liId2) => {
   const [idx1, idx2] = [Number(liId1.split('-')[1]), Number(liId2.split('-')[1])];
   const [task1, task2] = [tasks[idx1 - 1], tasks[idx2 - 1]];
 
-  tasks[idx1 - 1] = {...task2, index: task1.index};
-  tasks[idx2 - 1] = {...task1, index: task2.index};
+  tasks[idx1 - 1] = { ...task2, index: task1.index };
+  tasks[idx2 - 1] = { ...task1, index: task2.index };
   setData(tasks);
 };
