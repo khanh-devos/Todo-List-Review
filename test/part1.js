@@ -1,4 +1,4 @@
-import Data from "./__mock__/mockData.js";
+import Data from './__mock__/mockData.js';
 
 export const addNew = (description) => {
   const data = new Data();
@@ -18,7 +18,7 @@ export const addNew = (description) => {
     const check = data.getData();
     return check[check.length - 1];
   }
-  throw new Error("task cannot be an empty string");
+  throw new Error('task cannot be an empty string');
 };
 
 export const deleteTasks = (checks) => {
@@ -38,9 +38,8 @@ export const deleteTasks = (checks) => {
     const checkTasks = data.getData();
     return checkTasks;
   }
-  throw new Error("no task completed");
+  throw new Error('no task completed');
 };
-
 
 export const deleteSingleTask = (index) => {
   const data = new Data();
