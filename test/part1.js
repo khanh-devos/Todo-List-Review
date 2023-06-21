@@ -40,3 +40,13 @@ export const deleteTasks = (checks) => {
   }
   throw new Error("no task completed");
 };
+
+
+export const deleteSingleTask = (index) => {
+  const data = new Data();
+  const arrIndex = new Array(index.toString());
+  data.deleteArrOfIndex(arrIndex);
+
+  // check
+  return data.getData();
+};

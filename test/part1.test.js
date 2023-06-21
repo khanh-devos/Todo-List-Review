@@ -35,4 +35,23 @@ describe("part 1", () => {
       },
     ]);
   });
+
+  test('deleteSingleTask', () => {
+    const index = 2;
+    expect(funcs.deleteSingleTask(index)).toStrictEqual(
+      [
+        {
+          index: 1,
+          description: 'task1',
+          completed: false,
+        },
+        {
+          index: 2,
+          description: 'task3',
+          completed: false,
+        },
+      ],
+    );
+  });
 });
+
