@@ -32,12 +32,13 @@ describe('part2', () => {
       completed: false,
     });
   });
-});
-it('deleteTasks', () => {
-  document.body.innerHTML = `
-      <input type='checkbox' name='1' checked/>
-      <input type='checkbox' name='2' />
-      <input type='checkbox' name='3' checked/>
-    `;
-  expect(fs.deleteTasks()).toMatchObject(['1', '3']);
+
+  it('deleteTasks', () => {
+    document.body.innerHTML = `
+        <input type='checkbox' name='1' checked/>
+        <input type='checkbox' name='2' />
+        <input type='checkbox' name='3' checked/>
+      `;
+    expect(fs.deleteTasks()).toMatchObject(['1', '3']);
+  });
 });
