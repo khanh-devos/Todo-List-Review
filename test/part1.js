@@ -22,7 +22,6 @@ export const addNew = (description) => {
 };
 
 export const deleteTasks = (checks) => {
-  // const checks = document.querySelectorAll('input[type="checkbox"]');
   const data = new Data();
   const checkeds = [];
   checks.forEach((e) => {
@@ -33,7 +32,6 @@ export const deleteTasks = (checks) => {
     data.deleteArrOfIndex(checkeds);
   }
 
-  // for testing
   if (checkeds.length > 0) {
     const checkTasks = data.getData();
     return checkTasks;
@@ -46,6 +44,5 @@ export const deleteSingleTask = (index) => {
   const arrIndex = new Array(index.toString());
   data.deleteArrOfIndex(arrIndex);
 
-  // check
   return data.getData();
 };
