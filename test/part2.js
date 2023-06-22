@@ -21,3 +21,13 @@ export const editTask = ({
   return data.getData()[editedTask.index - 1];
 };
 
+export const deleteTasks = () => {
+  const checks = document.querySelectorAll('input[type="checkbox"]');
+
+  const checkeds = [];
+  checks.forEach((e) => {
+    if (e.checked) checkeds.push(e.name);
+  });
+
+  return checkeds;
+};
